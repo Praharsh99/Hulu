@@ -1,0 +1,77 @@
+.videoCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 450px;
+  height: 400px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s;
+  margin: 22px;
+  margin-bottom: 50px;
+}
+
+.videoCard-hover:hover {
+  transform: scale(1.09);
+}
+
+.videoCard > img,
+.videoCard > iframe {
+  object-fit: contain;
+  width: 450px;
+  height: 300px;
+  align-self: center;
+  border: none;
+}
+
+.videoCard > p {
+  font-size: 14px;
+  height: 30px;
+  overflow: visible !important;
+}
+
+.videoCard > h2 {
+  padding-top: 10px;
+}
+
+.videoCard__stats {
+  visibility: hidden;
+}
+
+.videoCard:hover .videoCard__stats {
+  display: flex;
+  align-items: center;
+  visibility: visible;
+}
+
+.videoCard:hover .videoCard__playButton {
+  opacity: 1;
+}
+
+.videoCard__playButton {
+  position: absolute;
+  z-index: 100;
+  top: 22px;
+  left: 0;
+  height: 255px;
+  width: 450px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.videoCard__playButton button {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.videoCard__playButton button > .MuiSvgIcon-root {
+  font-size: 100px;
+  color: #fff;
+}
